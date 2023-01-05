@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2867655326297700833, guid: 42010f00f2a57244785e04eb33f951d0, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2867655326297700833, guid: 42010f00f2a57244785e04eb33f951d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -235,9 +235,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kiwi
       objectReference: {fileID: 0}
-    - target: {fileID: 2854977548405566339, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
-      propertyPath: m_TagString
-      value: Player
+    - target: {fileID: 3133431701211985773, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
+      propertyPath: speed
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
@@ -369,34 +369,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7579729966013370374, guid: 7f89ca2fd329aeb4fb5adcb99d706f29, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f89ca2fd329aeb4fb5adcb99d706f29, type: 3}
---- !u!1 &1621497181 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2854977548405566339, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
-  m_PrefabInstance: {fileID: 1148374217}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1621497188
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621497181}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &2066889599
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +458,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2066889603
 MonoBehaviour:
@@ -522,6 +500,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3642732333428824206, guid: 3bcc6873ca5b45440a726b5b5f1292af, type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3898470460709195026, guid: 3bcc6873ca5b45440a726b5b5f1292af, type: 3}
       propertyPath: m_RootOrder
       value: 5
