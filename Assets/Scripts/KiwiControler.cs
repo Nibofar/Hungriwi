@@ -7,12 +7,14 @@ public class KiwiControler : MonoBehaviour{
     public bool stunned;
     private float setTimer = 2f;
     private float timer;
+    Rigidbody2D rb;
 
-    Vector3 direction = new Vector2(0, 0);
+    Vector2 direction = new Vector2(0, 0);
     void Start()
     {
         timer = setTimer;
         stunned = false;
+        rb = GetComponent<Rigidbody2D>();
     }
     void Update()
     {
@@ -59,7 +61,8 @@ public class KiwiControler : MonoBehaviour{
                     direction.y = -0.707f;
                 }
             }
-            transform.position += direction * Time.deltaTime * speed;
+            rb.velocity = rb.velocity + direction * speed *Time.deltaTime;
+            rb.velocity *= 0.8f;
 
         }
     }
