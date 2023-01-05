@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 8891199228031173050}
   - component: {fileID: -8518382107629145399}
   - component: {fileID: 5441313869119766765}
+  - component: {fileID: 183829203752850141}
   m_Layer: 0
   m_Name: Tree 2 Green
   m_TagString: Untagged
@@ -291,6 +292,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7140784, y: 0.95795226}
   m_EdgeRadius: 0
+--- !u!114 &183829203752850141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044990290394988613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08508cdc9f3abc4ca9fac02f736140c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 9112266480611414780}
+  - {fileID: 1736503479951121752}
+  - {fileID: 181703339815472687}
+  - {fileID: 2600358789718543804}
+  - {fileID: 5519025555954528605}
+  - {fileID: 778944390360835347}
+  p: {fileID: 2143065394880146680}
 --- !u!1 &2035959777140819549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1081,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e98128221820fdf46b8f6f0251cfef59, type: 3}
+--- !u!199 &2143065394880146680 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 285142213578311427, guid: e98128221820fdf46b8f6f0251cfef59, type: 3}
+  m_PrefabInstance: {fileID: 2182193900101217275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &2659767215720289115 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 4224888799684098208, guid: e98128221820fdf46b8f6f0251cfef59, type: 3}

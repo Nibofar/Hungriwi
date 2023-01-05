@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3646369324653406716}
   - component: {fileID: 3646369324653406717}
   - component: {fileID: 3646369324653406718}
+  - component: {fileID: 6551913205263922022}
+  - component: {fileID: -6101810641696380877}
   m_Layer: 0
   m_Name: Worm
   m_TagString: Untagged
@@ -99,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  slider: {fileID: 0}
+  pos: {x: 0, y: 0}
 --- !u!61 &3646369324653406718
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126,3 +128,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6551913205263922022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646369324653406719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08508cdc9f3abc4ca9fac02f736140c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 3646369324653406716}
+  p: {fileID: 0}
+--- !u!210 &-6101810641696380877
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646369324653406719}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0

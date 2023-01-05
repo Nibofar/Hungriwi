@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class InsectManager : MonoBehaviour{
     public List<Insect> insectsList;
@@ -29,5 +30,6 @@ public class InsectManager : MonoBehaviour{
         Vector2 pos = GameManager.Instance.GenerateVector();
         GameManager.Instance.InsectList.Add(Instantiate(insectsList[temp], pos * GameManager.Instance.mapRatio, Quaternion.identity));
         GameManager.Instance.InsectList[GameManager.Instance.InsectList.Count - 1].pos = pos;
+        GameManager.Instance.InsectList[GameManager.Instance.InsectList.Count - 1].GetComponent<SortingGroup>().sortingOrder = (GameManager.Instance.sizeMapY - (int)pos.y) * 10;
     }
 }

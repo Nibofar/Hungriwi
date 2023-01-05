@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3699153877769063860}
   - component: {fileID: -8245249995958694673}
   - component: {fileID: 4148739542279418999}
+  - component: {fileID: 3969999933133103017}
   m_Layer: 0
   m_Name: Tree 1 Green
   m_TagString: Untagged
@@ -108,7 +109,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.8223257}
+  m_Offset: {x: 0, y: 2.3490758}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -119,8 +120,28 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.7352273}
+  m_Size: {x: 1, y: 0.7887268}
   m_EdgeRadius: 0
+--- !u!114 &3969999933133103017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306185852702572702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08508cdc9f3abc4ca9fac02f736140c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 8415540353018712615}
+  - {fileID: 1343774725248703875}
+  - {fileID: 593012187595509492}
+  - {fileID: 3362240322776239463}
+  - {fileID: 5055505846790222214}
+  - {fileID: 31554347369375176}
+  p: {fileID: 1705484728583029545}
 --- !u!1 &845961597660496563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1085,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e98128221820fdf46b8f6f0251cfef59, type: 3}
+--- !u!199 &1705484728583029545 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 285142213578311427, guid: e98128221820fdf46b8f6f0251cfef59, type: 3}
+  m_PrefabInstance: {fileID: 1467643539818431530}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &3386654128719805578 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 4224888799684098208, guid: e98128221820fdf46b8f6f0251cfef59, type: 3}
