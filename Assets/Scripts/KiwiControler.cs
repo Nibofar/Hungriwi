@@ -4,31 +4,63 @@ using UnityEngine;
 
 public class KiwiControler : MonoBehaviour{
     public float speed;
+    public bool stunned;
+    private float setTimer = 2f;
+    private float timer;
+
     Vector3 direction = new Vector2(0, 0);
     void Start()
     {
-        
+        timer = setTimer;
+        stunned = false;
     }
-    void Update(){
+    void Update()
+    {
         direction.x = Input.GetAxis("Horizontal");
         direction.y = Input.GetAxis("Vertical");
-        if (direction.x == 1) { 
-            if(direction.y == 1) {
-                direction.x = 0.707f;
-                direction.y = 0.707f;
-            } else if (direction.y == -1) {
-                direction.x = 0.707f;
-                direction.y = -0.707f;
+        if (stunned == true)
+        {
+            Debug.Log("stunned " + stunned);
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                stunned = false;
+                timer = setTimer;
+                Debug.Log("stunned " + stunned);
             }
-        } else if (direction.x == -1) {
-            if (direction.y == 1) {
-                direction.x = -0.707f;
-                direction.y = 0.707f;
-            } else if (direction.y == -1) {
-                direction.x = -0.707f;
-                direction.y = -0.707f;
-            }
+            
+           
         }
-        transform.position += direction * Time.deltaTime * speed;
+        else
+        {
+            if (direction.x == 1)
+            {
+                if (direction.y == 1)
+                {
+                    direction.x = 0.707f;
+                    direction.y = 0.707f;
+                }
+                else if (direction.y == -1)
+                {
+                    direction.x = 0.707f;
+                    direction.y = -0.707f;
+                }
+            }
+            else if (direction.x == -1)
+            {
+                if (direction.y == 1)
+                {
+                    direction.x = -0.707f;
+                    direction.y = 0.707f;
+                }
+                else if (direction.y == -1)
+                {
+                    direction.x = -0.707f;
+                    direction.y = -0.707f;
+                }
+            }
+            transform.position += direction * Time.deltaTime * speed;
+
+        }
     }
 }
