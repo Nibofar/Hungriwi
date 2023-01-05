@@ -3,10 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InsectManager : MonoBehaviour{
-    public GameObject worm;
-    public GameObject spider;
-    public int maxNb;
-    public int timeRatio;
-    int nb = 0;
-
+    public List<Insect> insectsList;
+    [Tooltip("Number max of Insect on the map")]public int maxNb;
+    [Tooltip("x in %")]public int wormSpawn;
+    [Tooltip("Each time x insect are eaten, number max decrease by 'removeMax'")]public int insectEatInARow;
+    public int removeMax;
+    void Start() {
+        for (int i = 0; i < maxNb; i++) {
+            InstanceInsect();
+        }
+    }
+    void Update() {
+        if (GameManager.Instance.InsectList.Count < maxNb) {
+            InstanceInsect();
+        }
+        if (GameManager.Instance.insectEatInARow == insectEatInARow) {
+            maxNb -= removeMax;
+            GameManager.Instance.insectEatInARow = 0;
+        }
+    }
+    void InstanceInsect() {
+        int temp = Random.Range(0, 100);
+        if (temp < wormSpawn) temp = 0;
+        else temp = 1;
+        Vector2 pos = GameManager.Instance.GenerateVector();
+        GameManager.Instance.InsectList.Add(Instantiate(insectsList[temp], pos * GameManager.Instance.mapRatio, Quaternion.identity));
+        GameManager.Instance.InsectList[GameManager.Instance.InsectList.Count - 1].pos = pos;
+    }
 }
