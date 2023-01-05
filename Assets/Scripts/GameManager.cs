@@ -22,10 +22,13 @@ public class GameManager : MonoBehaviour {
     [Header("Map")]
     public int sizeMapX;
     public int sizeMapY;
+    public float mapRatio;
     [HideInInspector] public bool[,] propsData;
     public int treeMin;
     public int treeMax;
     [HideInInspector] public List<GameObject> TreeList;
+    [HideInInspector] public List<Insect> InsectList;
+    public int insectEatInARow;
 
     [Header("Eating Jauge")]
     [SerializeField] float maxJauge = 10.0f;
@@ -44,16 +47,29 @@ public class GameManager : MonoBehaviour {
         if(!Instance) Instance = this;
         propsData = new bool[sizeMapX, sizeMapY];
     }
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.R)) ResetMap();
+    }
     public void SetState(GameState newState) {
         if (newState == CurrentGameState) return;
         PreviousGameState = CurrentGameState;
         CurrentGameState = newState;
         OnGameStateChanged?.Invoke(newState);
     }
-    public void SetPropsData(int x, int y) {
+    public void SetPropsData(int x, int y, bool state) {
         propsData[x, y] = true;
     }
-    public void ResetTree() {
+    public Vector2 GenerateVector() {
+        int x = Random.Range(0, sizeMapX);
+        int y = Random.Range(0, sizeMapY);
+        Vector2 temp = new Vector2(x, y);
+        if (propsData[x, y]) {
+            temp = GenerateVector();
+        }
+        SetPropsData(x, y, true);
+        return temp;
+    }
+    public void ResetMap() {
         for(int i = 0; i < sizeMapX; i++) {
             for(int j = 0; j < sizeMapY; j++) {
                 propsData[i, j] = false;
@@ -63,6 +79,10 @@ public class GameManager : MonoBehaviour {
             Destroy(TreeList[i]);
         }
         TreeList.Clear();
+        for (int i = 0; i < InsectList.Count; i++) {
+            Destroy(InsectList[i].gameObject);
+        }
+        InsectList.Clear();
     }
     public void AddJaugeProgression(int value) {
         UIManager.Instance.AddJaugeProgression(value);
