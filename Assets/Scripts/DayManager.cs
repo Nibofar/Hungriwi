@@ -27,8 +27,8 @@ public class DayManager : MonoBehaviour {
     private void Awake() {
         if (!Instance) Instance = this;
         this.OnDayStateChanged += OnDayStateChangedFunc;
-        CurrentDayState = (DayState)2;
-        SetState(firstState);
+        CurrentDayState = firstState;
+        OnDayStateChanged?.Invoke(firstState);
     }
     private void Update() {
         gameTime += Time.deltaTime * speed * 60.0f;
