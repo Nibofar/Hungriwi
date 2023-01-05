@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 1620869055930336772}
   - component: {fileID: 2948294111675534182}
   - component: {fileID: 4908815967058733561}
+  - component: {fileID: -6527822832531403726}
   m_Layer: 0
   m_Name: Tree 4 Green
   m_TagString: Untagged
@@ -291,6 +292,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.1821556}
   m_EdgeRadius: 0
+--- !u!114 &-6527822832531403726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687935460466030455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ba87f0a3b582f4080cacfbffb9e6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1620869055930336772}
+  r: 0
+  fruit: {fileID: 3138375843439187957, guid: 7c7b2c95ff91b3b49b68ef7468f5efa9, type: 3}
+  insect: {fileID: 7263024315408669104, guid: 1c65114b047733149b505a877579c1b8, type: 3}
+  kiwi: {fileID: 2854977548405566339, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
 --- !u!1 &1967415704172327279
 GameObject:
   m_ObjectHideFlags: 0
