@@ -6,6 +6,7 @@ public enum InsectType { worm, spider }
 public class Insect : MonoBehaviour{
     public InsectType type;
     public Slider slider;
+    public Vector2 pos;
     private void OnTriggerEnter2D(Collider2D collision) {
         if (type == InsectType.worm) {
             slider.value -= 1;

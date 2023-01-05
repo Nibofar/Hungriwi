@@ -22,10 +22,12 @@ public class GameManager : MonoBehaviour {
     [Header("Map")]
     public int sizeMapX;
     public int sizeMapY;
+    public float mapRatio;
     [HideInInspector] public bool[,] propsData;
     public int treeMin;
     public int treeMax;
     [HideInInspector] public List<GameObject> TreeList;
+    [HideInInspector] public List<GameObject> InsectList;
 
     [Header("Eating Jauge")]
     [SerializeField] float maxJauge = 10.0f;
@@ -53,7 +55,17 @@ public class GameManager : MonoBehaviour {
     public void SetPropsData(int x, int y) {
         propsData[x, y] = true;
     }
-    public void ResetTree() {
+    public Vector2 GenerateVector() {
+        int x = Random.Range(0, sizeMapX);
+        int y = Random.Range(0, sizeMapY);
+        Vector2 temp = new Vector2(x, y);
+        if (propsData[x, y]) {
+            temp = GenerateVector();
+        }
+        SetPropsData(x, y);
+        return temp;
+    }
+    public void ResetMap() {
         for(int i = 0; i < sizeMapX; i++) {
             for(int j = 0; j < sizeMapY; j++) {
                 propsData[i, j] = false;
@@ -63,6 +75,10 @@ public class GameManager : MonoBehaviour {
             Destroy(TreeList[i]);
         }
         TreeList.Clear();
+        for (int i = 0; i < InsectList.Count; i++) {
+            Destroy(InsectList[i]);
+        }
+        InsectList.Clear();
     }
     public void AddJaugeProgression(int value) {
         UIManager.Instance.AddJaugeProgression(value);

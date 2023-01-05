@@ -327,7 +327,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 10
+  far clip plane: 1000
   field of view: 60
   orthographic: 1
   orthographic size: 10
@@ -476,6 +476,7 @@ GameObject:
   - component: {fileID: 497069104}
   - component: {fileID: 497069103}
   - component: {fileID: 497069102}
+  - component: {fileID: 497069105}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -497,6 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tree: {fileID: 8119321823515193251, guid: 41939b1c6a62ece4381546a80980b8b5, type: 3}
   night: 0
+  targetList: []
 --- !u!114 &497069103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,11 +511,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179c30ec15f5a94439e6e95036d5008d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeMapX: 9
-  sizeMapY: 5
+  sizeMapX: 30
+  sizeMapY: 18
+  mapRatio: 3.5
   treeMin: 5
   treeMax: 8
   TreeList: []
+  InsectList: []
+  maxJauge: 10
+  minJauge: 0
 --- !u!4 &497069104
 Transform:
   m_ObjectHideFlags: 0
@@ -529,6 +535,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &497069105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497069101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2998f8b721b3bf845a8e9644e49a8999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  insectsList:
+  - {fileID: 3646369324653406717, guid: aa366e22b2ee51f48a045a0b32dd6a17, type: 3}
+  - {fileID: 7263024315408669110, guid: 1c65114b047733149b505a877579c1b8, type: 3}
+  maxNb: 20
+  timeRatio: 0
 --- !u!1 &605018430
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +593,7 @@ MonoBehaviour:
     FieldOfView: 60
     OrthographicSize: 10
     NearClipPlane: 0.3
-    FarClipPlane: 10
+    FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}

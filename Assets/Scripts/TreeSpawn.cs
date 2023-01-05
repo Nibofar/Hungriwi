@@ -13,10 +13,10 @@ public class TreeSpawn : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.T))
             SpawnPrefab();
         if (Input.GetKeyDown(KeyCode.R))
-            GameManager.Instance.ResetTree();
+            GameManager.Instance.ResetMap();
     }
     public void SpawnPrefab()
     {
@@ -24,20 +24,7 @@ public class TreeSpawn : MonoBehaviour
         for (int i = 0; i <= j; i++)
         {
             int k = Random.Range(0, targetList.Count);
-            Vector2 place = GenerateVector();
-            GameManager.Instance.SetPropsData((int)place.x, (int)place.y);
-            GameManager.Instance.TreeList.Add(Instantiate(targetList[k], place, Quaternion.identity));
-
+            GameManager.Instance.TreeList.Add(Instantiate(targetList[k], GameManager.Instance.GenerateVector() * GameManager.Instance.mapRatio, Quaternion.identity));
         }
-
-    }
-     Vector2 GenerateVector() {
-        int x = Random.Range(0, GameManager.Instance.sizeMapX);
-        int y = Random.Range(0, GameManager.Instance.sizeMapY);
-        Vector2 temp = new Vector2(x, y);
-        if (GameManager.Instance.propsData[x, y]) {
-            temp = GenerateVector();
-        }
-        return temp;
     }
 }
