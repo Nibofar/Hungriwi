@@ -15,13 +15,10 @@ public class Jauge : MonoBehaviour {
         }
     }
 
-    private void Update() {
-        AddProgression((int)Input.GetAxis("Horizontal"));
-    }
+
     public void AddProgression(int value) {
         Progression += value;
         this.gameObject.GetComponent<Image>().material.SetFloat("_Progression", ProgressionNormalized);
         this.gameObject.GetComponent<Image>().material.SetFloat("_Limit", LimitNormalized);
-        Debug.Log(LimitNormalized);
     }
 }

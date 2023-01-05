@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &432261837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,10 +457,11 @@ MonoBehaviour:
   center: {fileID: 604133113}
   radius: 3
   tile: 0.4
-  step: 0.01
-  edgeWidth: 0.03
+  step: 0.053
+  edgeWidth: 0.04
   noiseSpeed: 0.1
-  edgeColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
+  blurRadius: 2
+  edgeColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
 --- !u!4 &1175233838
 Transform:
   m_ObjectHideFlags: 0
