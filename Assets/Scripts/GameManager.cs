@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
@@ -18,7 +19,15 @@ public class GameManager : MonoBehaviour {
     public delegate void GameStateChangeHandler(GameState newState);
     public event GameStateChangeHandler OnGameStateChanged;
 
+    [Header("Map")]
+    public int sizeMapX;
+    public int sizeMapY;
+    [HideInInspector] public bool[,] propsData;
+    public int treeMin;
+    public int treeMax;
+    [HideInInspector] public List<GameObject> TreeList;
 
+    [Header("Eating Jauge")]
     [SerializeField] float maxJauge = 10.0f;
     [SerializeField] float minJauge = 0.0f;
 
@@ -33,12 +42,27 @@ public class GameManager : MonoBehaviour {
 
     void Awake() {
         if(!Instance) Instance = this;
+        propsData = new bool[sizeMapX, sizeMapY];
     }
     public void SetState(GameState newState) {
         if (newState == CurrentGameState) return;
         PreviousGameState = CurrentGameState;
         CurrentGameState = newState;
         OnGameStateChanged?.Invoke(newState);
+    }
+    public void SetPropsData(int x, int y) {
+        propsData[x, y] = true;
+    }
+    public void ResetTree() {
+        for(int i = 0; i < sizeMapX; i++) {
+            for(int j = 0; j < sizeMapY; j++) {
+                propsData[i, j] = false;
+            }
+        }
+        for(int i = 0; i < TreeList.Count; i++) {
+            Destroy(TreeList[i]);
+        }
+        TreeList.Clear();
     }
     public void AddJaugeProgression(int value) {
         UIManager.Instance.AddJaugeProgression(value);
