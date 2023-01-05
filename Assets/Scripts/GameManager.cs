@@ -31,16 +31,22 @@ public class GameManager : MonoBehaviour {
     public int insectEatInARow;
 
     [Header("Eating Jauge")]
-    [SerializeField] float maxJauge = 10.0f;
-    [SerializeField] float minJauge = 0.0f;
-
+    [Tooltip("Nombre de point max pour la jauge")]
+    [SerializeField] int maxJauge = 10;
+    [Tooltip("Nombre quand la jauge doit changer au rouge")]
+    [SerializeField] int dangerLimitMin = 2;
+    [Tooltip("Nombre quand la jauge doit changer au vert")]
+    [SerializeField] int dangerLimitMax = 5;
 
     public float MaxJauge { get { return maxJauge; } }
-    public float MinJauge { get { return minJauge; } }
+    public float DangerLimitMin { get { return dangerLimitMin; } }
+    public float DangerLimitMax { get { return dangerLimitMax; } }
 
     private void OnValidate() {
-        if (minJauge > maxJauge) minJauge = maxJauge;
-        if (maxJauge < minJauge) maxJauge = minJauge;
+        if (maxJauge < 0) maxJauge = 0;
+        if (dangerLimitMin < 0) dangerLimitMax = 0;
+        if (dangerLimitMax < dangerLimitMin) dangerLimitMax = dangerLimitMin;
+        if (dangerLimitMax > maxJauge) dangerLimitMax = maxJauge;
     }
 
     void Awake() {

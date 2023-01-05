@@ -21,8 +21,10 @@ public class DayManager : MonoBehaviour {
 
     private float speed = 1;
     public float GameTime { get; private set; }
+    public float SequenceTime { get; private set; }
     public float RealTime { get; private set; }
-    public float Delta { get; private set; }
+    public float DeltaGameTime { get; private set; }
+    public const float TimePerDay = 60.0f * 60.0f * 24.0f;
 
 
     private void Awake() {
@@ -32,9 +34,15 @@ public class DayManager : MonoBehaviour {
         OnDayStateChanged?.Invoke(firstState);
     }
     private void Update() {
-        Delta = Time.deltaTime* speed *60.0f;
-        GameTime += Delta;
+        DeltaGameTime = Time.deltaTime* speed * 60.0f;
+        GameTime += DeltaGameTime;
+        SequenceTime += DeltaGameTime;
         RealTime += Time.deltaTime;
+        if(SequenceTime > TimePerDay * 0.5f) {
+            SequenceTime %= TimePerDay * 0.5f;
+            if (CurrentDayState == DayState.Day) SetState(DayState.Night);
+            else SetState(DayState.Day);
+        }
     }
     public void SetState(DayState newState) {
         if (newState == CurrentDayState) return;
