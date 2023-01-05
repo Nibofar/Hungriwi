@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 2854977548405566337}
   - component: {fileID: 3539633984228288017}
   - component: {fileID: 2869240673352599969}
+  - component: {fileID: 3133431701211985773}
   m_Layer: 0
   m_Name: Kiwi
   m_TagString: Untagged
@@ -208,6 +209,19 @@ MonoBehaviour:
   - {fileID: 4490698514301927770}
   - {fileID: 3787153395350449809}
   _randomAnimationStart: 1
+--- !u!114 &3133431701211985773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2854977548405566339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf50f8ccec4a8745aea407f54969024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &2854977549368000199
 GameObject:
   m_ObjectHideFlags: 0
