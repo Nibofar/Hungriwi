@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour {
 
     void Awake() {
         if(!Instance) Instance = this;
-        propsData = new bool[sizeMapX * 2, sizeMapY * 2];
+        propsData = new bool[sizeMapX, sizeMapY];
     }
     public void SetState(GameState newState) {
         if (newState == CurrentGameState) return;
@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour {
         propsData[x, y] = true;
     }
     public void ResetTree() {
+        for(int i = 0; i < sizeMapX; i++) {
+            for(int j = 0; j < sizeMapY; j++) {
+                propsData[i, j] = false;
+            }
+        }
         for(int i = 0; i < TreeList.Count; i++) {
             Destroy(TreeList[i]);
         }
