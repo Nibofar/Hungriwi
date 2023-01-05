@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pink Bush
+  m_Name: M_GreenBush
   m_Shader: {fileID: -6465566751694194690, guid: 9bcb994e7d8f6c54f88fa0ebf63a3e7e, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a8a524439af76b34488b1bb0efbc18af, type: 3}
+        m_Texture: {fileID: 2800000, guid: 40d978256aa205649949eae852a08465, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
@@ -50,10 +50,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alpha: 255
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
     - _InnerColor: {r: 0, g: 1, b: 0, a: 0}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Maincolor: {r: 1, g: 1, b: 1, a: 1}
     - _OuterColor: {r: 0, g: 1, b: 1, a: 0}
     - _Vector2: {r: 1.69, g: 1.54, b: 0, a: 0}
   m_BuildTextureStacks: []

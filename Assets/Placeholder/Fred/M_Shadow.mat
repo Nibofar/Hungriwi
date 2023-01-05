@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shadow
+  m_Name: M_Shadow
   m_Shader: {fileID: -6465566751694194690, guid: 9bcb994e7d8f6c54f88fa0ebf63a3e7e, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -42,9 +42,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alpha: 50
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Maincolor: {r: 1, g: 0, b: 0, a: 0}
     - _Vector2: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5047932894811110931

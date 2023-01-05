@@ -20,8 +20,9 @@ public class DayManager : MonoBehaviour {
     [SerializeField] private float nightSpeed = 1;
 
     private float speed = 1;
-    private float gameTime = 0;
-    private float realtime = 0;
+    public float GameTime { get; private set; }
+    public float RealTime { get; private set; }
+    public float Delta { get; private set; }
 
 
     private void Awake() {
@@ -31,8 +32,9 @@ public class DayManager : MonoBehaviour {
         OnDayStateChanged?.Invoke(firstState);
     }
     private void Update() {
-        gameTime += Time.deltaTime * speed * 60.0f;
-        realtime += Time.deltaTime;
+        Delta = Time.deltaTime* speed *60.0f;
+        GameTime += Delta;
+        RealTime += Time.deltaTime;
     }
     public void SetState(DayState newState) {
         if (newState == CurrentDayState) return;
