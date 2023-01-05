@@ -40,4 +40,7 @@ public class GameManager : MonoBehaviour {
         CurrentGameState = newState;
         OnGameStateChanged?.Invoke(newState);
     }
+    public void AddJaugeProgression(int value) {
+        UIManager.Instance.AddJaugeProgression(value);
+    }
 }
