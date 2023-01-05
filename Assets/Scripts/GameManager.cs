@@ -22,13 +22,11 @@ public class GameManager : MonoBehaviour {
     [Header("Map")]
     public int sizeMapX;
     public int sizeMapY;
-    public float mapRatio;
+    [Tooltip("Distance between props")]public float mapRatio;
     [HideInInspector] public bool[,] propsData;
-    public int treeMin;
-    public int treeMax;
     [HideInInspector] public List<GameObject> TreeList;
     [HideInInspector] public List<Insect> InsectList;
-    public int insectEatInARow;
+    [HideInInspector] public int insectEatInARow;
 
     [Header("Eating Jauge")]
     [Tooltip("Nombre de point max pour la jauge")]
