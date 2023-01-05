@@ -14,7 +14,7 @@ public class InteractionWithKiwi : MonoBehaviour
 
     private void Start()
     {
-        r = Random.Range(1, 6);
+        r = Random.Range(1, 7);
         bonked = false;
     }
 
@@ -29,7 +29,7 @@ public class InteractionWithKiwi : MonoBehaviour
                 Instantiate<GameObject>(insect, new Vector2(pos.x, pos.y +2), Quaternion.identity);
                 bonked = true;
             }
-            else if (r >= 2 && bonked == false)
+            else if (r >= 5 && bonked == false)
             {
                 Instantiate<GameObject>(fruit, new Vector2(pos.x, pos.y +2), Quaternion.identity);
                 bonked = true;

@@ -10,6 +10,7 @@ public class FruitStun : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             collision.GetComponent<KiwiControler>().stunned = true;
+            Destroy(this.gameObject);
         }
     }
 }
