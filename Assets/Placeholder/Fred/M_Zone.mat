@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Zone
-  m_Shader: {fileID: -6465566751694194690, guid: 7b9c63dbbee36174bb958e6c485a4d5f, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 85c337337fc5af94bb1fbf993e00b0fd, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2
@@ -50,7 +50,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: 0e7d5b2b3f140e54a914b1590d7c17fb, type: 3}
+        m_Texture: {fileID: 2800000, guid: a7d27c2947da6f942bd31ce036b6de29, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_b4b124c815ca49e89e1046ff6f419d67_Texture_1:
@@ -85,5 +85,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    m_Colors: []
+    m_Colors:
+    - _InnerColor: {r: 0.35686275, g: 0.6784314, b: 0.21960784, a: 0}
+    - _OuterColor: {r: 0.18664517, g: 0.3584906, b: 0.113296546, a: 0}
   m_BuildTextureStacks: []
