@@ -35,16 +35,30 @@ public class GameManager : MonoBehaviour {
     [SerializeField] int dangerLimitMin = 2;
     [Tooltip("Nombre quand la jauge doit changer au vert")]
     [SerializeField] int dangerLimitMax = 5;
+    [Tooltip("Score soustrait par heure InGame")]
+    [SerializeField] int scoreLoosePerHour = 1;
+    [Tooltip("Temps in Game en min par score de jauge")]
+    [SerializeField] float rewindTimePerScore = 60.0f;
 
-    public float MaxJauge { get { return maxJauge; } }
-    public float DangerLimitMin { get { return dangerLimitMin; } }
-    public float DangerLimitMax { get { return dangerLimitMax; } }
+    [Header("Vision Radius")]
+    [SerializeField] [Min(0.01f)]   float radiusMin = 3.0f;
+    [SerializeField]                float radiusMax = 10.0f;
+
+    public int MaxJauge { get { return maxJauge; } }
+    public int DangerLimitMin { get { return dangerLimitMin; } }
+    public int DangerLimitMax { get { return dangerLimitMax; } }
+    public int ScoreLoosePerHour { get { return scoreLoosePerHour; } }
+    public float RewindTimePerScore { get { return rewindTimePerScore; } }
+    public float RadiusMin { get { return radiusMin; } }
+    public float RadiusMax { get { return radiusMax; } }
 
     private void OnValidate() {
         if (maxJauge < 0) maxJauge = 0;
         if (dangerLimitMin < 0) dangerLimitMax = 0;
         if (dangerLimitMax < dangerLimitMin) dangerLimitMax = dangerLimitMin;
         if (dangerLimitMax > maxJauge) dangerLimitMax = maxJauge;
+        if (radiusMax < radiusMin) radiusMax = radiusMin;
+        if (radiusMin > radiusMax) radiusMin = radiusMax;
     }
 
     void Awake() {

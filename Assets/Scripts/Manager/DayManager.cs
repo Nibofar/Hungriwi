@@ -22,7 +22,7 @@ public class DayManager : MonoBehaviour {
     private float speed = 1;
     public float GameTime { get; private set; }
     public float SequenceTime { get; private set; }
-    public float RealTime { get; private set; }
+    public float HourTime { get; private set; }
     public float DeltaGameTime { get; private set; }
     public const float TimePerDay = 60.0f * 60.0f * 24.0f;
 
@@ -37,11 +37,19 @@ public class DayManager : MonoBehaviour {
         DeltaGameTime = Time.deltaTime* speed * 60.0f;
         GameTime += DeltaGameTime;
         SequenceTime += DeltaGameTime;
-        RealTime += Time.deltaTime;
         if(SequenceTime > TimePerDay * 0.5f) {
             SequenceTime %= TimePerDay * 0.5f;
             if (CurrentDayState == DayState.Day) SetState(DayState.Night);
             else SetState(DayState.Day);
+        }
+
+
+        if (CurrentDayState == DayState.Day) return;
+
+        HourTime += DeltaGameTime;
+        if(HourTime > 60.0f * 60.0f) {
+            HourTime %= 60.0f * 60.0f;
+            GameManager.Instance.AddJaugeProgression(-GameManager.Instance.ScoreLoosePerHour);
         }
     }
     public void SetState(DayState newState) {
@@ -58,5 +66,11 @@ public class DayManager : MonoBehaviour {
                 speed = nightSpeed;
                 break;
         }
+    }
+
+    public void RewindTime(int score) {
+        float totalScore = -GameManager.Instance.RewindTimePerScore * score * 60.0f;
+        GameTime += totalScore;
+        SequenceTime += totalScore;
     }
 }

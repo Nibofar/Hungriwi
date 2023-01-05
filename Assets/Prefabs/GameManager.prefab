@@ -44,3 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179c30ec15f5a94439e6e95036d5008d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sizeMapX: 30
+  sizeMapY: 18
+  mapRatio: 3.5
+  TreeList: []
+  InsectList: []
+  insectEatInARow: 0
+  maxJauge: 20
+  dangerLimitMin: 5
+  dangerLimitMax: 10
+  scoreLoosePerHour: 1
+  rewindTimePerScore: 60
+  radiusMin: 3
+  radiusMax: 10

@@ -95,7 +95,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _NoiseMask: 0.3
+    - _NoiseMask: 0.2
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RAd: 0
@@ -106,5 +106,6 @@ Material:
     - _OuterColor: {r: 0.0754717, g: 0.3018868, b: 0.17772369, a: 0}
     - _OuterNoiseColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
     - _OuterNoiseSpeed: {r: 0.01, g: 0, b: 0, a: 0}
+    - _OuterNoiseTilling: {r: 10, g: 10, b: 0, a: 0}
     - _RingColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []

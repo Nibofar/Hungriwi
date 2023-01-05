@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour {
 
-    [SerializeField] Jauge eatingJauge;
+    [SerializeField] EatingJauge eatingJauge;
     [SerializeField] GameObject MainMenu;
     [SerializeField] GameObject InGame;
     [SerializeField] GameObject Pause;
