@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RayonSoleil : MonoBehaviour
+public class SpotLightChase : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2.5f;
     Rigidbody2D rb;
@@ -24,7 +24,7 @@ public class RayonSoleil : MonoBehaviour
         if (target)
         {
             Vector2 direction = (target.position - transform.position).normalized;
-            //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             moveDirection = direction;
         }
     }
