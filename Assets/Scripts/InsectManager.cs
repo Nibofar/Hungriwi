@@ -4,19 +4,30 @@ using UnityEngine;
 
 public class InsectManager : MonoBehaviour{
     public List<Insect> insectsList;
-    public int maxNb;
-    public int timeRatio;
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.I)) {
+    [Tooltip("Number max of Insect on the map")]public int maxNb;
+    [Tooltip("x in %")]public int wormSpawn;
+    [Tooltip("Each time x insect are eaten, number max decrease by 'removeMax'")]public int insectEatInARow;
+    public int removeMax;
+    void Start() {
+        for (int i = 0; i < maxNb; i++) {
             InstanceInsect();
         }
     }
-    void InstanceInsect() {
-        for (int i = 0; i < maxNb; i++) {
-            int temp = Random.Range(0, 10);
-            if (temp < 7) temp = 0;
-            else temp = 1;
-            GameManager.Instance.InsectList.Add(Instantiate(insectsList[temp].gameObject, GameManager.Instance.GenerateVector() * GameManager.Instance.mapRatio, Quaternion.identity));
+    void Update() {
+        if (GameManager.Instance.InsectList.Count < maxNb) {
+            InstanceInsect();
         }
+        if (GameManager.Instance.insectEatInARow == insectEatInARow) {
+            maxNb -= removeMax;
+            GameManager.Instance.insectEatInARow = 0;
+        }
+    }
+    void InstanceInsect() {
+        int temp = Random.Range(0, 100);
+        if (temp < wormSpawn) temp = 0;
+        else temp = 1;
+        Vector2 pos = GameManager.Instance.GenerateVector();
+        GameManager.Instance.InsectList.Add(Instantiate(insectsList[temp], pos * GameManager.Instance.mapRatio, Quaternion.identity));
+        GameManager.Instance.InsectList[GameManager.Instance.InsectList.Count - 1].pos = pos;
     }
 }

@@ -1,19 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 public enum InsectType { worm, spider }
 public class Insect : MonoBehaviour{
     public InsectType type;
-    public Slider slider;
     public Vector2 pos;
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (type == InsectType.worm) {
-            slider.value -= 1;
-        }else {
-            slider.value -= 2;
-        }
-        Mathf.Clamp(slider.value, 0, 20);
+        //add value for the jauge
+        GameManager.Instance.SetPropsData((int)pos.x, (int)pos.y, false);
+        GameManager.Instance.insectEatInARow++;
+        GameManager.Instance.InsectList.Remove(this);
         Destroy(gameObject);
     }
 }
