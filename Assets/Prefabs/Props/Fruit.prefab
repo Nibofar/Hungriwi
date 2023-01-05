@@ -136,3 +136,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d87d0079f7f30499a5714f4a8d35bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kiwi: {fileID: 0}

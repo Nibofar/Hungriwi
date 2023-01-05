@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FruitStun : MonoBehaviour
 {
-    [SerializeField] private GameObject kiwi;
+    private KiwiControler kiwi;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.CompareTag("Player"))
         {
-
+            collision.GetComponent<KiwiControler>().stunned = true;
         }
     }
 }

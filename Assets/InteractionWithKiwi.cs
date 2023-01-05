@@ -16,7 +16,6 @@ public class InteractionWithKiwi : MonoBehaviour
     {
         r = Random.Range(1, 6);
         bonked = false;
-        Debug.Log(bonked);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -29,16 +28,13 @@ public class InteractionWithKiwi : MonoBehaviour
             {
                 Instantiate<GameObject>(insect, new Vector2(pos.x, pos.y +2), Quaternion.identity);
                 bonked = true;
-                Debug.Log(bonked);
             }
-            else if (r >= 4 && bonked == false)
+            else if (r >= 2 && bonked == false)
             {
                 Instantiate<GameObject>(fruit, new Vector2(pos.x, pos.y +2), Quaternion.identity);
                 bonked = true;
-                Debug.Log(bonked);
             }
-            else 
-                Debug.Log("already bonked");
+            else return;
         }
     }
 
