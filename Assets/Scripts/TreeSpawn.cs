@@ -6,7 +6,11 @@ public class TreeSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject tree;
     [SerializeField] private bool night = false;
-
+    public List<GameObject> targetList;
+    private void Start()
+    {
+        targetList = new List<GameObject>(Resources.LoadAll<GameObject>("ccadori/Vector Forest Scenery/Prefabs/Dinamic/Green-Trees"));
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -19,9 +23,10 @@ public class TreeSpawn : MonoBehaviour
         int j = Random.Range(GameManager.Instance.treeMin, GameManager.Instance.treeMax);
         for (int i = 0; i <= j; i++)
         {
+            int k = Random.Range(0, targetList.Count);
             Vector2 place = GenerateVector();
             GameManager.Instance.SetPropsData((int)place.x, (int)place.y);
-            GameManager.Instance.TreeList.Add(Instantiate(tree, place, Quaternion.identity));
+            GameManager.Instance.TreeList.Add(Instantiate(targetList[k], place, Quaternion.identity));
 
         }
 
