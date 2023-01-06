@@ -34,6 +34,7 @@ public class DayManager : MonoBehaviour {
 
     private void Awake() {
         if (!Instance) Instance = this;
+        GameManager.Instance.OnGameStateChanged += OnGameStateChanged;
         this.OnDayStateChanged += OnDayStateChangedFunc;
         CurrentDayState = firstState;
         OnDayStateChanged?.Invoke(firstState);
@@ -75,5 +76,16 @@ public class DayManager : MonoBehaviour {
         float totalScore = -GameManager.Instance.RewindTimePerScore * score * 60.0f;
         GameTime += totalScore;
         SequenceTime += totalScore;
+    }
+
+    public void OnGameStateChanged(GameManager.GameState newState) {
+        switch (newState) {
+            case GameManager.GameState.InGame:
+                enabled = true;
+                break;
+            default:
+                enabled = false;
+                break;
+        }
     }
 }

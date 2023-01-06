@@ -57,4 +57,4 @@ MonoBehaviour:
   minuteToLooseScore: 120
   rewindTimePerScore: 60
   radiusMin: 3
-  radiusMax: 14
+  radiusMax: 13

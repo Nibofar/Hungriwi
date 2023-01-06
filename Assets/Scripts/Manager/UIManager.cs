@@ -11,34 +11,54 @@ public class UIManager : MonoBehaviour {
 
     void Awake() {
         if(!Instance) Instance = this;
-    }
-    void Start() {
         GameManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
     void OnGameStateChanged(GameManager.GameState newState) {
-
+        switch (newState) {
+            case GameManager.GameState.InGame:
+                ToPlay();
+                break;
+            case GameManager.GameState.Boot:
+                break;
+            case GameManager.GameState.MainMenu:
+                ToMainMenu();
+                break;
+            case GameManager.GameState.Pause:
+                ToPause();
+                break;
+            case GameManager.GameState.GameOver:
+                break;
+            case GameManager.GameState.Credit:
+                ToCredit();
+                break;
+            default:
+                enabled = false;
+                break;
+        }
     }
 
     public void AddJaugeProgression(float value) {
         eatingJauge.AddProgression(value);
     }
-    public void ToPlay() {
-        Debug.Log("test");
+    void ToPlay() {
         InGame.SetActive(true);
         Pause.SetActive(false);
         MainMenu.SetActive(false);
     }
-    public void ToMainMenu() {
+    void ToMainMenu() {
         MainMenu.SetActive(true);
         Pause.SetActive(false);
         Credit.SetActive(false);
     }
-    public void ToPause() {
+    void ToPause() {
         Pause.SetActive(true);
         InGame.SetActive(false);
     }
-    public void ToCredit() {
+    void ToCredit() {
         Credit.SetActive(true);
         MainMenu.SetActive(false);
+    }
+    public void ChangeState(int newState) {
+        GameManager.Instance.SetState((GameManager.GameState)newState);
     }
 }
