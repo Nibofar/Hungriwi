@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour {
                 break;
             case GameState.MainMenu:
                 ResetMap();
+                AddJaugeProgression(MaxJauge);
                 break;
             case GameState.Pause:
                 break;

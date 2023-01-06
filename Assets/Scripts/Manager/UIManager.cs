@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour {
     [SerializeField] GameObject InGame;
     [SerializeField] GameObject Pause;
     [SerializeField] GameObject Credit;
+    [SerializeField] GameObject GameOver;
     [SerializeField] GameObject Tuto;
     [SerializeField] AudioSource GameSound;
     [SerializeField] AudioSource MenuSound;
@@ -52,6 +53,7 @@ public class UIManager : MonoBehaviour {
                 ToPause();
                 break;
             case GameManager.GameState.GameOver:
+                ToGameOver();
                 break;
             case GameManager.GameState.Credit:
                 ToCredit();
@@ -74,6 +76,7 @@ public class UIManager : MonoBehaviour {
         MainMenu.SetActive(true);
         Pause.SetActive(false);
         Credit.SetActive(false);
+        GameOver.SetActive(false);
     }
     void ToPause() {
         Pause.SetActive(true);
@@ -82,6 +85,10 @@ public class UIManager : MonoBehaviour {
     void ToCredit() {
         Credit.SetActive(true);
         MainMenu.SetActive(false);
+    }
+    void ToGameOver() {
+        GameOver.SetActive(true);
+        InGame.SetActive(false);
     }
     public void ChangeState(int newState) {
         GameManager.Instance.SetState((GameManager.GameState)newState);
