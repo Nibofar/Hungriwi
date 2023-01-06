@@ -78,8 +78,8 @@ public class GameManager : MonoBehaviour {
         propsData[x, y] = true;
     }
     public Vector2 GenerateVector() {
-        int x = Random.Range(0, sizeMapX);
-        int y = Random.Range(0, sizeMapY);
+        int x = Random.Range(1, sizeMapX);
+        int y = Random.Range(1, sizeMapY);
         Vector2 temp = new Vector2(x, y);
         if (propsData[x, y]) {
             temp = GenerateVector();
