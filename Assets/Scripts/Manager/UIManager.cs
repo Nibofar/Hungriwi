@@ -86,4 +86,7 @@ public class UIManager : MonoBehaviour {
     public void ChangeState(int newState) {
         GameManager.Instance.SetState((GameManager.GameState)newState);
     }
+    public void Quit() {
+        Application.Quit();
+    }
 }
