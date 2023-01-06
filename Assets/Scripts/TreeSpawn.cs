@@ -5,6 +5,7 @@ using UnityEngine.Rendering;
 
 public class TreeSpawn : MonoBehaviour
 {
+    [SerializeField] GameObject sus;
     public int treeMin;
     public int treeMax;
     List<GameObject> targetList;
@@ -12,6 +13,7 @@ public class TreeSpawn : MonoBehaviour
     {
         targetList = new List<GameObject>(Resources.LoadAll<GameObject>("ccadori/Vector Forest Scenery/Prefabs/Dinamic/Green-Trees"));
         SpawnPrefab();
+        Instantiate(sus, GameManager.Instance.GenerateVector() * GameManager.Instance.mapRatio, Quaternion.identity);
     }
     public void SpawnPrefab()
     {
