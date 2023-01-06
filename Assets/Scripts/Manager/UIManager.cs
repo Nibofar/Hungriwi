@@ -7,8 +7,10 @@ public class UIManager : MonoBehaviour {
     [SerializeField] GameObject InGame;
     [SerializeField] GameObject Pause;
     [SerializeField] GameObject Credit;
+    [SerializeField] GameObject Tuto;
     [SerializeField] AudioSource GameSound;
     [SerializeField] AudioSource MenuSound;
+    float timer = 0;
     AudioSource menuSound;
     AudioSource gameSound;
     public static UIManager Instance { get; private set; }
@@ -19,10 +21,18 @@ public class UIManager : MonoBehaviour {
         menuSound = Instantiate(MenuSound, transform.position, Quaternion.identity);
         gameSound = Instantiate(GameSound, transform.position, Quaternion.identity);
     }
+    void Update() {
+        if (Tuto.activeSelf) {
+            timer += Time.deltaTime;
+            if (timer >= 5) Tuto.SetActive(false);
+        }
+    }
     void OnGameStateChanged(GameManager.GameState newState) {
         switch (newState) {
             case GameManager.GameState.InGame:
                 if(GameManager.Instance.PreviousGameState == GameManager.GameState.MainMenu) {
+                    Tuto.SetActive(true);
+                    timer = 0;
                     menuSound.Stop();
                     gameSound.Play();
                 }
