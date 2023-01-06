@@ -19,7 +19,6 @@ public class DayManager : MonoBehaviour {
     [Tooltip("x min per sec")]
     [SerializeField] private float nightSpeed = 1;
 
-    private float speed = 1;
     public float GameTime { get; private set; }
     public float SequenceTime { get; private set; }
     public float HourTime { get; private set; }
@@ -34,7 +33,12 @@ public class DayManager : MonoBehaviour {
         OnDayStateChanged?.Invoke(firstState);
     }
     private void Update() {
-        DeltaGameTime = Time.deltaTime* speed * 60.0f;
+        if (CurrentDayState == DayState.Day) {
+            DeltaGameTime = Time.deltaTime * daySpeed * 60.0f;
+
+        } else {
+            DeltaGameTime = Time.deltaTime* nightSpeed * 60.0f;
+        }
         GameTime += DeltaGameTime;
         SequenceTime += DeltaGameTime;
         if(SequenceTime > TimePerDay * 0.5f) {
@@ -60,10 +64,8 @@ public class DayManager : MonoBehaviour {
     void OnDayStateChangedFunc(DayState newState) {
         switch (newState) {
             case DayState.Day:
-                speed = daySpeed;
                 break;
             case DayState.Night:
-                speed = nightSpeed;
                 break;
         }
     }
