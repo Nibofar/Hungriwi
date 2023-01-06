@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour {
 
     }
 
-    public void AddJaugeProgression(int value) {
+    public void AddJaugeProgression(float value) {
         eatingJauge.AddProgression(value);
     }
     public void ToPlay() {

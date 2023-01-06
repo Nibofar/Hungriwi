@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour {
     [Tooltip("Distance between props")]public float mapRatio;
     [HideInInspector] public bool[,] propsData;
     [HideInInspector] public List<GameObject> TreeList;
+    [HideInInspector] public List<GameObject> CreatureList;
     [HideInInspector] public List<Insect> InsectList;
     [HideInInspector] public int insectEatInARow;
 
@@ -35,8 +36,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] int dangerLimitMin = 2;
     [Tooltip("Nombre quand la jauge doit changer au vert")]
     [SerializeField] int dangerLimitMax = 5;
-    [Tooltip("Score soustrait par heure InGame")]
-    [SerializeField] int scoreLoosePerHour = 1;
+    [Tooltip("Score - 1 pour les x temps en min")]
+    [SerializeField] float minuteToLooseScore = 60.0f;
     [Tooltip("Temps in Game en min par score de jauge")]
     [SerializeField] float rewindTimePerScore = 60.0f;
 
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour {
     public int MaxJauge { get { return maxJauge; } }
     public int DangerLimitMin { get { return dangerLimitMin; } }
     public int DangerLimitMax { get { return dangerLimitMax; } }
-    public int ScoreLoosePerHour { get { return scoreLoosePerHour; } }
+    public float MinuteToLooseScore { get { return minuteToLooseScore; } }
     public float RewindTimePerScore { get { return rewindTimePerScore; } }
     public float RadiusMin { get { return radiusMin; } }
     public float RadiusMax { get { return radiusMax; } }
@@ -101,8 +102,12 @@ public class GameManager : MonoBehaviour {
             Destroy(InsectList[i].gameObject);
         }
         InsectList.Clear();
+        for (int i = 0; i < CreatureList.Count; i++) {
+            Destroy(CreatureList[i].gameObject);
+        }
+        CreatureList.Clear();
     }
-    public void AddJaugeProgression(int value) {
+    public void AddJaugeProgression(float value) {
         UIManager.Instance.AddJaugeProgression(value);
     }
 }
