@@ -49,6 +49,7 @@ MonoBehaviour:
   mapRatio: 3.5
   TreeList: []
   CreatureList: []
+  DecorList: []
   InsectList: []
   insectEatInARow: 0
   maxJauge: 20
@@ -56,5 +57,6 @@ MonoBehaviour:
   dangerLimitMax: 10
   minuteToLooseScore: 120
   rewindTimePerScore: 60
-  radiusMin: 3
-  radiusMax: 13
+  radiusMin: 1
+  radiusMax: 6
+  dayRadius: 15

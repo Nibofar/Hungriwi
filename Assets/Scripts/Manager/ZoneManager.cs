@@ -28,6 +28,10 @@ public class ZoneManager : MonoBehaviour {
     }
 
     public void SetRadius(float value) {
+        if(DayManager.Instance.CurrentDayState == DayManager.DayState.Day) {
+            radius = GameManager.Instance.DayRadius;
+            return;
+        }
         radius = Mathf.Lerp(GameManager.Instance.RadiusMin, GameManager.Instance.RadiusMax,value);
     }
 }
