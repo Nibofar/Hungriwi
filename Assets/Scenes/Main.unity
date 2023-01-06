@@ -987,6 +987,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2854977548405566336, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854977548405566336, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854977548405566336, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 65
       objectReference: {fileID: 0}
@@ -1217,11 +1225,11 @@ PrefabInstance:
       objectReference: {fileID: 7263024315408669110, guid: 1c65114b047733149b505a877579c1b8, type: 3}
     - target: {fileID: 3431718539145184408, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
       propertyPath: treeMax
-      value: 70
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 3431718539145184408, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
       propertyPath: treeMin
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3431718539145184411, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
       propertyPath: m_Name
@@ -1260,5 +1268,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c483c45d658a7894fbff0e5d0f28b611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decorMin: 50
-  decorMax: 200
+  decorMin: 100
+  decorMax: 300
