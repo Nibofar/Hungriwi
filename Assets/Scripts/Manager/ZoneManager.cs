@@ -12,6 +12,7 @@ public class ZoneManager : MonoBehaviour {
     [SerializeField] [Min(0.01f)]           float noiseSpeed = 0.1f;
     [SerializeField] 
     [ColorUsage(true, true)] Color edgeColor = Color.white;
+    public float Radius { get { return radius; } }
     private void Awake() {
         if (!Instance) Instance = this;
     }
