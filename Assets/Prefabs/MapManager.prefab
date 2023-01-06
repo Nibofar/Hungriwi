@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3431718539145184391}
   - component: {fileID: 1641216244}
   - component: {fileID: 1641216248}
+  - component: {fileID: 2400608160608024541}
   m_Layer: 0
   m_Name: MapManager
   m_TagString: Untagged
@@ -63,6 +64,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   insectsList:
   - {fileID: 3646369324653406717, guid: aa366e22b2ee51f48a045a0b32dd6a17, type: 3}
+  - {fileID: 3646369324653406717, guid: 99ab48be53bc2db438b193e44103cab7, type: 3}
+  - {fileID: 3646369324653406717, guid: 7ccb824affc16934a80d77b930ef4c3c, type: 3}
+  - {fileID: 3646369324653406717, guid: 54788a52cdc812744a00bc2641f44fd8, type: 3}
   - {fileID: 7263024315408669110, guid: 1c65114b047733149b505a877579c1b8, type: 3}
   maxNb: 40
   wormSpawn: 70
@@ -96,3 +100,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decorMin: 100
   decorMax: 150
+--- !u!114 &2400608160608024541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431718539145184411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1366cc9c75001394aa50974adc30d755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creatureMin: 50
+  creatureMax: 100
