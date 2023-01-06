@@ -7,20 +7,30 @@ public class UIManager : MonoBehaviour {
     [SerializeField] GameObject InGame;
     [SerializeField] GameObject Pause;
     [SerializeField] GameObject Credit;
+    [SerializeField] AudioSource GameSound;
+    [SerializeField] AudioSource MenuSound;
+    AudioSource menuSound;
+    AudioSource gameSound;
     public static UIManager Instance { get; private set; }
 
     void Awake() {
         if(!Instance) Instance = this;
         GameManager.Instance.OnGameStateChanged += OnGameStateChanged;
+        menuSound = Instantiate(MenuSound, transform.position, Quaternion.identity);
+        gameSound = Instantiate(GameSound, transform.position, Quaternion.identity);
     }
     void OnGameStateChanged(GameManager.GameState newState) {
         switch (newState) {
             case GameManager.GameState.InGame:
+                menuSound.Stop();
+                gameSound.Play();
                 ToPlay();
                 break;
             case GameManager.GameState.Boot:
                 break;
             case GameManager.GameState.MainMenu:
+                gameSound.Stop();
+                menuSound.Play();
                 ToMainMenu();
                 break;
             case GameManager.GameState.Pause:
