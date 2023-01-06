@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
+  crunch: {fileID: 7337297118090545570, guid: 86248ced6f04ae048820f26ed61f57a2, type: 3}
   pos: {x: 0, y: 0}
 --- !u!61 &7263024315408669105
 BoxCollider2D:
