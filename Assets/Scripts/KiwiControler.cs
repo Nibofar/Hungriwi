@@ -21,6 +21,7 @@ public class KiwiControler : MonoBehaviour {
     }
     void Update() {
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        animator.SetBool("Sleep", DayManager.Instance.CurrentDayState == DayManager.DayState.Day);
         if (DayManager.Instance.CurrentDayState == DayManager.DayState.Day) {
             rb.velocity = Vector2.zero;
             return;

@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstState: 0
-  daySpeed: 60
+  daySpeed: 90
   nightSpeed: 30
