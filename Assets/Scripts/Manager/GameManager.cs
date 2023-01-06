@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour {
     void Awake() {
         if(!Instance) Instance = this;
         propsData = new bool[sizeMapX, sizeMapY];
+        Application.targetFrameRate = 60;
     }
     private void Start() {
         CurrentGameState = GameState.MainMenu;

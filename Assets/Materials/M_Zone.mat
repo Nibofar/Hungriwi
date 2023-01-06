@@ -95,7 +95,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _NoiseMask: 0.2
+    - _NoiseMask: 0.15
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RAd: 0
