@@ -23,12 +23,14 @@ public class UIManager : MonoBehaviour {
         eatingJauge.AddProgression(value);
     }
     public void ToPlay() {
+        Debug.Log("test");
         InGame.SetActive(true);
         Pause.SetActive(false);
         MainMenu.SetActive(false);
     }
     public void ToMainMenu() {
         MainMenu.SetActive(true);
+        Pause.SetActive(false);
         Credit.SetActive(false);
     }
     public void ToPause() {
