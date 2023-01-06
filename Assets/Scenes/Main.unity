@@ -1030,7 +1030,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kiwi
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3539633984228288017, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1f174044502008e498cb9a4257e9870d, type: 2}
+    m_RemovedComponents:
+    - {fileID: 2869240673352599969, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
 --- !u!4 &1626847327 stripped
 Transform:
@@ -1198,6 +1203,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: insectsList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: insectsList.Array.data[2]
+      value: 
+      objectReference: {fileID: 7263024315408669110, guid: 1c65114b047733149b505a877579c1b8, type: 3}
+    - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: insectsList.Array.data[3]
+      value: 
+      objectReference: {fileID: 7263024315408669110, guid: 1c65114b047733149b505a877579c1b8, type: 3}
     - target: {fileID: 3431718539145184411, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
       propertyPath: m_Name
       value: MapManager
