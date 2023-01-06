@@ -27,6 +27,6 @@ public class ZoneManager : MonoBehaviour {
     }
 
     public void SetRadius(float value) {
-        radius = Mathf.Lerp(GameManager.Instance.RadiusMin, GameManager.Instance.RadiusMax, 1.0f - value);
+        radius = Mathf.Lerp(GameManager.Instance.RadiusMin, GameManager.Instance.RadiusMax,value);
     }
 }

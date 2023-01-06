@@ -19,12 +19,17 @@ public class DayManager : MonoBehaviour {
     [Tooltip("x min per sec")]
     [SerializeField] private float nightSpeed = 1;
 
-    private float speed = 1;
     public float GameTime { get; private set; }
     public float SequenceTime { get; private set; }
-    public float HourTime { get; private set; }
     public float DeltaGameTime { get; private set; }
     public const float TimePerDay = 60.0f * 60.0f * 24.0f;
+
+    public float SequenceProgression { 
+        get {
+            if (CurrentDayState == DayState.Day) return 1.0f;
+            return SequenceTime / (TimePerDay * 0.5f);
+        }
+    }
 
 
     private void Awake() {
@@ -34,10 +39,14 @@ public class DayManager : MonoBehaviour {
         OnDayStateChanged?.Invoke(firstState);
     }
     private void Update() {
-        DeltaGameTime = Time.deltaTime* speed * 60.0f;
+        ZoneManager.Instance.SetRadius(SequenceProgression);
+        if (CurrentDayState == DayState.Day)    DeltaGameTime = Time.deltaTime * daySpeed * 60.0f;
+        else DeltaGameTime = Time.deltaTime* nightSpeed * 60.0f;
+
+
         GameTime += DeltaGameTime;
         SequenceTime += DeltaGameTime;
-        if(SequenceTime > TimePerDay * 0.5f) {
+        if (SequenceTime > TimePerDay * 0.5f) {
             SequenceTime %= TimePerDay * 0.5f;
             if (CurrentDayState == DayState.Day) SetState(DayState.Night);
             else SetState(DayState.Day);
@@ -46,11 +55,7 @@ public class DayManager : MonoBehaviour {
 
         if (CurrentDayState == DayState.Night) return;
 
-        HourTime += DeltaGameTime;
-        if(HourTime > 60.0f * 60.0f) {
-            HourTime %= 60.0f * 60.0f;
-            GameManager.Instance.AddJaugeProgression(-GameManager.Instance.ScoreLoosePerHour);
-        }
+        GameManager.Instance.AddJaugeProgression(-(DeltaGameTime / (GameManager.Instance.MinuteToLooseScore * 60.0f)));
     }
     public void SetState(DayState newState) {
         if (newState == CurrentDayState) return;
@@ -60,10 +65,8 @@ public class DayManager : MonoBehaviour {
     void OnDayStateChangedFunc(DayState newState) {
         switch (newState) {
             case DayState.Day:
-                speed = daySpeed;
                 break;
             case DayState.Night:
-                speed = nightSpeed;
                 break;
         }
     }

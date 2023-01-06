@@ -18,13 +18,9 @@ public class EatingJauge : MonoBehaviour {
     private void Start() {
         AddProgression(GameManager.Instance.MaxJauge);
     }
-    private void Update() {
-        ZoneManager.Instance.SetRadius(ProgressionNormalized);
-    }
-    public void AddProgression(int value) {
+    public void AddProgression(float value) {
         Progression += value;
-        if (Progression <= 0)
-            GameManager.Instance.SetState(GameManager.GameState.GameOver);
+        if (Progression <= 0) GameManager.Instance.SetState(GameManager.GameState.GameOver);
         Progression = Mathf.Clamp(Progression, 0, GameManager.Instance.MaxJauge);
         this.gameObject.GetComponent<Image>().material.SetFloat("_Progression", ProgressionNormalized);
         this.gameObject.GetComponent<Image>().material.SetFloat("_Limit", LimitNormalized);
