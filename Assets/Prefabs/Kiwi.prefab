@@ -197,6 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf50f8ccec4a8745aea407f54969024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 3539633984228288017}
+  sprite: {fileID: 5030252144802685184}
   speed: 300
   stunned: 0
 --- !u!61 &8244319807262165007

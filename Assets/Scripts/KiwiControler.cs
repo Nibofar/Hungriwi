@@ -1,6 +1,8 @@
 using UnityEngine;
 
 public class KiwiControler : MonoBehaviour {
+    [SerializeField] Animator animator;
+    [SerializeField] SpriteRenderer sprite;
     public float speed;
     public bool stunned;
     private float setTimer = 2f;
@@ -37,6 +39,7 @@ public class KiwiControler : MonoBehaviour {
 
         } else {
             if (direction.x == 1) {
+                sprite.flipX = true;
                 if (direction.y == 1) {
                     direction.x = 0.707f;
                     direction.y = 0.707f;
@@ -45,6 +48,7 @@ public class KiwiControler : MonoBehaviour {
                     direction.y = -0.707f;
                 }
             } else if (direction.x == -1) {
+                sprite.flipX = false;
                 if (direction.y == 1) {
                     direction.x = -0.707f;
                     direction.y = 0.707f;
@@ -55,6 +59,7 @@ public class KiwiControler : MonoBehaviour {
             }
             rb.velocity += speed * Time.deltaTime * direction;
             rb.velocity *= 0.8f;
+            animator.SetFloat("Speed", Mathf.Abs(direction.x));
         }
     }
 

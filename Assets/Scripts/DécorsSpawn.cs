@@ -21,7 +21,7 @@ public class DécorsSpawn : MonoBehaviour
             int k = Random.Range(0, targetList.Count);
             Vector2 pos = GameManager.Instance.GenerateVector();
             GameObject nuTree = Instantiate(targetList[k], pos * GameManager.Instance.mapRatio, Quaternion.identity);
-            nuTree.GetComponent<SortingGroup>().sortingOrder = (GameManager.Instance.sizeMapY - (int)pos.y) * 10;
+            //nuTree.GetComponent<SortingGroup>().sortingOrder = (GameManager.Instance.sizeMapY - (int)pos.y) * 10;
             GameManager.Instance.DecorList.Add(nuTree);
         }
     }
