@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_GreenTree
+  m_Name: M_Tree4_Green 4
   m_Shader: {fileID: -6465566751694194690, guid: 9bcb994e7d8f6c54f88fa0ebf63a3e7e, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -21,18 +21,10 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6758453285e65e64db59ece8c8bc8ccb, type: 3}
+        m_Texture: {fileID: 2800000, guid: faa09ad8bb8b9034587b257fd665cb60, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: a7d27c2947da6f942bd31ce036b6de29, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2DAsset_262d57722f7145238b5b0378c6016701_Out_0:
-        m_Texture: {fileID: 2800000, guid: 7bd556eda3000444a981bfee83e09508, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2DAsset_aaf14e61ecbb427e96cf80a08a38b70b_Out_0:
         m_Texture: {fileID: 2800000, guid: a7d27c2947da6f942bd31ce036b6de29, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -54,15 +46,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 255
+    - _Alpha: 50
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Shadow: 0
     m_Colors:
-    - _InnerColor: {r: 0, g: 1, b: 0, a: 0}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Maincolor: {r: 1, g: 1, b: 1, a: 1}
-    - _OuterColor: {r: 0, g: 1, b: 1, a: 0}
-    - _Vector2: {r: 1.69, g: 1.54, b: 0, a: 0}
+    - _Maincolor: {r: 1, g: 0, b: 0, a: 0}
+    - _ShadowColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Vector2: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5047932894811110931
 MonoBehaviour:
