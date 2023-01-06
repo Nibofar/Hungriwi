@@ -25,8 +25,8 @@ public class InsectManager : MonoBehaviour{
     }
     void InstanceInsect() {
         int temp = Random.Range(0, 100);
-        if (temp < wormSpawn) temp = 0;
-        else temp = 1;
+        if (temp < wormSpawn) temp = Random.Range(0,4);
+        else temp = 4;
         Vector2 pos = GameManager.Instance.GenerateVector();
         GameManager.Instance.InsectList.Add(Instantiate(insectsList[temp], pos * GameManager.Instance.mapRatio, Quaternion.identity));
         GameManager.Instance.InsectList[GameManager.Instance.InsectList.Count - 1].pos = pos;

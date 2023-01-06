@@ -205,7 +205,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &226022196
 GameObject:
@@ -276,7 +276,7 @@ Transform:
   m_Children:
   - {fileID: 269181925}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &269181924
 GameObject:
@@ -437,7 +437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2897508335904996327, guid: 082020240be9d9147a540da8901de41e, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2897508335904996327, guid: 082020240be9d9147a540da8901de41e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -488,17 +488,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2867655326297700832, guid: 42010f00f2a57244785e04eb33f951d0, type: 3}
-      propertyPath: daySpeed
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 2867655326297700832, guid: 42010f00f2a57244785e04eb33f951d0, type: 3}
-      propertyPath: firstState
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2867655326297700833, guid: 42010f00f2a57244785e04eb33f951d0, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2867655326297700833, guid: 42010f00f2a57244785e04eb33f951d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -613,7 +605,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2570957701335528509, guid: 7f89ca2fd329aeb4fb5adcb99d706f29, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2570957701335528509, guid: 7f89ca2fd329aeb4fb5adcb99d706f29, type: 3}
       propertyPath: m_LocalPosition.x
@@ -905,7 +897,7 @@ Transform:
   - {fileID: 1713166017}
   - {fileID: 402380378}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1626847326
 PrefabInstance:
@@ -916,7 +908,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2854977548405566336, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2854977548405566336, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -969,25 +961,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2854977548405566336, guid: 5233324e2eb92874388ab21441170ec0, type: 3}
   m_PrefabInstance: {fileID: 1626847326}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1641216240 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3431718539145184411, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
-  m_PrefabInstance: {fileID: 1756800294}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1641216244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641216240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90235285169eea408a1048e9b948583, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Eyes: {fileID: 1202476051767550132, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-  timeBetweenEyes: 10
 --- !u!1 &1705059806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,24 +1124,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
       propertyPath: insectsList.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: insectsList.Array.data[1]
+      value: 
+      objectReference: {fileID: 3646369324653406717, guid: 99ab48be53bc2db438b193e44103cab7, type: 3}
     - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
       propertyPath: insectsList.Array.data[2]
       value: 
-      objectReference: {fileID: 7263024315408669110, guid: 1c65114b047733149b505a877579c1b8, type: 3}
+      objectReference: {fileID: 3646369324653406717, guid: 7ccb824affc16934a80d77b930ef4c3c, type: 3}
     - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
       propertyPath: insectsList.Array.data[3]
       value: 
+      objectReference: {fileID: 3646369324653406717, guid: 54788a52cdc812744a00bc2641f44fd8, type: 3}
+    - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: insectsList.Array.data[4]
+      value: 
       objectReference: {fileID: 7263024315408669110, guid: 1c65114b047733149b505a877579c1b8, type: 3}
-    - target: {fileID: 3431718539145184408, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
-      propertyPath: treeMax
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 3431718539145184408, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
-      propertyPath: treeMin
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 3431718539145184411, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
       propertyPath: m_Name
       value: MapManager

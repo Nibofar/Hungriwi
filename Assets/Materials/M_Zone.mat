@@ -105,7 +105,8 @@ Material:
     - _InnerColor: {r: 0.3976458, g: 0.7735849, b: 0.23718406, a: 0}
     - _OuterColor: {r: 0.0754717, g: 0.3018868, b: 0.17772369, a: 0}
     - _OuterNoiseColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
-    - _OuterNoiseSpeed: {r: 0.01, g: 0, b: 0, a: 0}
+    - _OuterNoiseSpeed: {r: 0.05, g: -0.05, b: 0, a: 0}
+    - _OuterNoiseSpeed_1: {r: -0.05, g: -0.05, b: 0, a: 0}
     - _OuterNoiseTilling: {r: 10, g: 10, b: 0, a: 0}
     - _RingColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []

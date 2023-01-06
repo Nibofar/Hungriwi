@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 8412875494513366262}
   - component: {fileID: 7870344266702089661}
   - component: {fileID: 683792333393559437}
+  - component: {fileID: 772298946}
   m_Layer: 0
   m_Name: Stone 3 Grey
   m_TagString: Untagged
@@ -289,6 +290,32 @@ MonoBehaviour:
   _lightAffectedRenderers:
   - {fileID: 2967241407140303204}
   - {fileID: 7686313699566768405}
+--- !u!61 &772298946
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7726712376034893948}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.7}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &8728750917952809987
 GameObject:
   m_ObjectHideFlags: 0

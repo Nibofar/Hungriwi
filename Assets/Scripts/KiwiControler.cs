@@ -9,17 +9,21 @@ public class KiwiControler : MonoBehaviour {
     private float timer;
     Rigidbody2D rb;
 
+
     Vector2 direction = new Vector2(0, 0);
     private void Awake() {
         GameManager.Instance.OnGameStateChanged += OnGameStateChanged;
+        rb = GetComponent<Rigidbody2D>();
     }
     void Start() {
         timer = setTimer;
         stunned = false;
-        rb = GetComponent<Rigidbody2D>();
     }
     void Update() {
-        if (DayManager.Instance.CurrentDayState == DayManager.DayState.Day) return;
+        if (DayManager.Instance.CurrentDayState == DayManager.DayState.Day) {
+            rb.velocity = Vector2.zero;
+            return;
+        }
 
         direction.x = Input.GetAxis("Horizontal");
         direction.y = Input.GetAxis("Vertical");
@@ -53,13 +57,13 @@ public class KiwiControler : MonoBehaviour {
                     direction.y = -0.707f;
                 }
             }
-            rb.velocity = rb.velocity + direction * speed * Time.deltaTime;
+            rb.velocity += speed * Time.deltaTime * direction;
             rb.velocity *= 0.8f;
             animator.SetFloat("Speed", Mathf.Abs(direction.x));
         }
     }
 
-    public void OnGameStateChanged(GameManager.GameState newState) {
+    void OnGameStateChanged(GameManager.GameState newState) {
         switch (newState) {
             case GameManager.GameState.InGame:
                 enabled = true;
