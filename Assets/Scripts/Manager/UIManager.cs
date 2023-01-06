@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour {
     void Update() {
         if (Tuto.activeSelf) {
             timer += Time.deltaTime;
-            if (timer >= 5) Tuto.SetActive(false);
+            if (timer >= 8) Tuto.SetActive(false);
         }
     }
     void OnGameStateChanged(GameManager.GameState newState) {
