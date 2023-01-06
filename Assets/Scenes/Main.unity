@@ -1248,36 +1248,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
---- !u!1 &1756800295 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3431718539145184411, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
-  m_PrefabInstance: {fileID: 1756800294}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1756800296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756800295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1366cc9c75001394aa50974adc30d755, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  creatureMin: 45
-  creatureMax: 50
---- !u!114 &1756800300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756800295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c483c45d658a7894fbff0e5d0f28b611, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  decorMin: 50
-  decorMax: 200
