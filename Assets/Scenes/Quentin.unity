@@ -156,12 +156,13 @@ MonoBehaviour:
   sizeMapY: 18
   mapRatio: 3.5
   TreeList: []
+  CreatureList: []
   InsectList: []
   insectEatInARow: 0
   maxJauge: 10
   dangerLimitMin: 2
   dangerLimitMax: 5
-  scoreLoosePerHour: 1
+  minuteToLooseScore: 60
   rewindTimePerScore: 60
   radiusMin: 3
   radiusMax: 10
@@ -1083,7 +1084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6399496627547208931, guid: 7f89ca2fd329aeb4fb5adcb99d706f29, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6399496627547208933, guid: 7f89ca2fd329aeb4fb5adcb99d706f29, type: 3}
       propertyPath: m_RootOrder
@@ -1196,63 +1197,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
---- !u!1001 &7963654684614563329
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1202476051767550132, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-      propertyPath: m_Name
-      value: Eyes
-      objectReference: {fileID: 0}
-    - target: {fileID: 7962203401145416558, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7962203401145416558, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 45.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 7962203401145416558, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 21.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7962203401145416558, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7962203401145416558, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7962203401145416558, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7962203401145416558, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7962203401145416558, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7962203401145416558, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7962203401145416558, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7962203401145416558, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
 --- !u!1001 &9162073284396580924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1260,13 +1204,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1629932536551139656, guid: 3ce6fff8f9b824d4ba9c0866c7d13580, type: 3}
+      propertyPath: timeBetweenEyes
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3092151299036579765, guid: 3ce6fff8f9b824d4ba9c0866c7d13580, type: 3}
       propertyPath: m_Name
       value: EyesManager
       objectReference: {fileID: 0}
     - target: {fileID: 5619557300984888946, guid: 3ce6fff8f9b824d4ba9c0866c7d13580, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5619557300984888946, guid: 3ce6fff8f9b824d4ba9c0866c7d13580, type: 3}
       propertyPath: m_LocalPosition.x

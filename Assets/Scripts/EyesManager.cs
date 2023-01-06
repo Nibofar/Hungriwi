@@ -9,7 +9,7 @@ public class EyesManager : MonoBehaviour{
     void Update(){
         timer += Time.deltaTime;
         if(timer >= timeBetweenEyes) {
-            Instantiate(Eyes, GenerateEyesPos(), Quaternion.identity);
+            Instantiate(Eyes, GenerateEyesPos() * GameManager.Instance.mapRatio, Quaternion.identity);
             timer = 0;
         }
     }
