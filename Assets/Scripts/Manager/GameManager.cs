@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour {
     [Header("Vision Radius")]
     [SerializeField] [Min(0.01f)]   float radiusMin = 3.0f;
     [SerializeField]                float radiusMax = 10.0f;
+    [SerializeField]                float dayRadius = 15.0f;
 
     public int MaxJauge { get { return maxJauge; } }
     public int DangerLimitMin { get { return dangerLimitMin; } }
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour {
     public float RewindTimePerScore { get { return rewindTimePerScore; } }
     public float RadiusMin { get { return radiusMin; } }
     public float RadiusMax { get { return radiusMax; } }
+    public float DayRadius { get { return dayRadius; } }
 
     private void OnValidate() {
         if (maxJauge < 0) maxJauge = 0;
@@ -66,6 +68,10 @@ public class GameManager : MonoBehaviour {
     void Awake() {
         if(!Instance) Instance = this;
         propsData = new bool[sizeMapX, sizeMapY];
+    }
+    private void Start() {
+        CurrentGameState = GameState.MainMenu;
+        OnGameStateChanged?.Invoke(CurrentGameState);
     }
     void Update() {
         if (Input.GetKeyDown(KeyCode.R)) ResetMap();

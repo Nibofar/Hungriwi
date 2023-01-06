@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3431718539145184390}
   - component: {fileID: 3431718539145184408}
   - component: {fileID: 3431718539145184391}
+  - component: {fileID: 1641216244}
+  - component: {fileID: 1641216248}
   m_Layer: 0
   m_Name: MapManager
   m_TagString: Untagged
@@ -45,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5214103840a74478318e917156b6cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeMin: 30
-  treeMax: 40
+  treeMin: 50
+  treeMax: 70
 --- !u!114 &3431718539145184391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,3 +68,31 @@ MonoBehaviour:
   wormSpawn: 70
   insectEatInARow: 10
   removeMax: 2
+--- !u!114 &1641216244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431718539145184411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90235285169eea408a1048e9b948583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Eyes: {fileID: 1202476051767550132, guid: 5247c83c40c5fe14084624f365c80081, type: 3}
+  timeBetweenEyes: 1
+--- !u!114 &1641216248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431718539145184411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c483c45d658a7894fbff0e5d0f28b611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decorMin: 100
+  decorMax: 200
