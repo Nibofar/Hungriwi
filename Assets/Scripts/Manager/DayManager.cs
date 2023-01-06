@@ -80,6 +80,13 @@ public class DayManager : MonoBehaviour {
 
     public void OnGameStateChanged(GameManager.GameState newState) {
         switch (newState) {
+            case GameManager.GameState.MainMenu:
+                GameTime = 0;
+                SequenceTime = 0;
+                CurrentDayState = firstState;
+                OnDayStateChanged?.Invoke(firstState);
+                enabled = false;
+                break;
             case GameManager.GameState.InGame:
                 enabled = true;
                 break;
