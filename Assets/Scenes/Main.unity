@@ -516,6 +516,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2897508335904996324, guid: 082020240be9d9147a540da8901de41e, type: 3}
+      propertyPath: sizeMapX
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897508335904996324, guid: 082020240be9d9147a540da8901de41e, type: 3}
+      propertyPath: sizeMapY
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897508335904996324, guid: 082020240be9d9147a540da8901de41e, type: 3}
       propertyPath: MapManager
       value: 
       objectReference: {fileID: 1756800295}
@@ -1250,6 +1258,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2400608160608024541, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: creatureMax
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 3431718539145184390, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1294,10 +1306,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: maxNb
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3431718539145184408, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
       propertyPath: sus
       value: 
       objectReference: {fileID: 8606565841152862536, guid: 0920ebec7112ad44ebbbf4dfb49350aa, type: 3}
+    - target: {fileID: 3431718539145184408, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: treeMax
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431718539145184408, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: treeMin
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3431718539145184411, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
       propertyPath: m_Name
       value: MapManager
