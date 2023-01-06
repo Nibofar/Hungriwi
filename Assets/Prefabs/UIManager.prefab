@@ -2736,8 +2736,8 @@ MonoBehaviour:
   Credit: {fileID: 5543289351810566777}
   GameOver: {fileID: 244674321058123326}
   Tuto: {fileID: 3531303045754952789}
-  GameSound: {fileID: 2668184807676018320, guid: ad1b2e240eeee4441a44b5797131f73f, type: 3}
-  MenuSound: {fileID: 5427880482968449430, guid: e9f8d6b6c7a24274aa50509d9b024ca6, type: 3}
+  GameSound: {fileID: 2668184807676018320, guid: b430b281a5b58d04794b2ece4bc4708b, type: 3}
+  GameSound2: {fileID: 2668184807676018320, guid: 997f7e14ab318da48a01253b58ea2a4b, type: 3}
 --- !u!1 &7016727732740247696
 GameObject:
   m_ObjectHideFlags: 0
