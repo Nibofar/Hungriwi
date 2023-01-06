@@ -83,6 +83,24 @@ public class GameManager : MonoBehaviour {
         PreviousGameState = CurrentGameState;
         CurrentGameState = newState;
         OnGameStateChanged?.Invoke(newState);
+        switch (newState) {
+            case GameState.InGame:
+                break;
+            case GameState.Boot:
+                break;
+            case GameState.MainMenu:
+                ResetMap();
+                break;
+            case GameState.Pause:
+                break;
+            case GameState.GameOver:
+                break;
+            case GameState.Credit:
+                break;
+            default:
+                enabled = false;
+                break;
+        }
     }
     public void SetPropsData(int x, int y, bool state) {
         propsData[x, y] = true;
