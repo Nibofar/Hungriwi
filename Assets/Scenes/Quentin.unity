@@ -161,6 +161,10 @@ MonoBehaviour:
   maxJauge: 10
   dangerLimitMin: 2
   dangerLimitMax: 5
+  scoreLoosePerHour: 1
+  rewindTimePerScore: 60
+  radiusMin: 3
+  radiusMax: 10
 --- !u!4 &30007498
 Transform:
   m_ObjectHideFlags: 0
@@ -671,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf50f8ccec4a8745aea407f54969024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 200
   stunned: 0
 --- !u!212 &1246861285
 SpriteRenderer:
@@ -1069,6 +1073,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2570957701335528509, guid: 7f89ca2fd329aeb4fb5adcb99d706f29, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6399496627547208931, guid: 7f89ca2fd329aeb4fb5adcb99d706f29, type: 3}
       propertyPath: m_Name
       value: UIManager
