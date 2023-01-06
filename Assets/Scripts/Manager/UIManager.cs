@@ -22,15 +22,20 @@ public class UIManager : MonoBehaviour {
     void OnGameStateChanged(GameManager.GameState newState) {
         switch (newState) {
             case GameManager.GameState.InGame:
-                menuSound.Stop();
-                gameSound.Play();
+                if(GameManager.Instance.PreviousGameState == GameManager.GameState.MainMenu) {
+                    menuSound.Stop();
+                    gameSound.Play();
+                }
                 ToPlay();
                 break;
             case GameManager.GameState.Boot:
                 break;
             case GameManager.GameState.MainMenu:
-                gameSound.Stop();
-                menuSound.Play();
+                if(GameManager.Instance.PreviousGameState == GameManager.GameState.InGame ||
+                    GameManager.Instance.PreviousGameState == GameManager.GameState.Boot) {
+                    gameSound.Stop();
+                    menuSound.Play();
+                }
                 ToMainMenu();
                 break;
             case GameManager.GameState.Pause:
