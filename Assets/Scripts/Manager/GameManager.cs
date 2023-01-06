@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour {
     [HideInInspector] public bool[,] propsData;
     [HideInInspector] public List<GameObject> TreeList;
     [HideInInspector] public List<GameObject> CreatureList;
+    [HideInInspector] public List<GameObject> DecorList;
     [HideInInspector] public List<Insect> InsectList;
     [HideInInspector] public int insectEatInARow;
 
@@ -105,7 +106,12 @@ public class GameManager : MonoBehaviour {
         for (int i = 0; i < CreatureList.Count; i++) {
             Destroy(CreatureList[i].gameObject);
         }
-        CreatureList.Clear();
+        CreatureList.Clear(); 
+        for (int i = 0; i < DecorList.Count; i++)
+        {
+            Destroy(DecorList[i].gameObject);
+        }
+        DecorList.Clear();
     }
     public void AddJaugeProgression(float value) {
         UIManager.Instance.AddJaugeProgression(value);

@@ -5,17 +5,17 @@ using UnityEngine.Rendering;
 
 public class CreatureManager : MonoBehaviour
 {
-    public int treeMin;
-    public int treeMax;
+    public int creatureMin;
+    public int creatureMax;
     List<GameObject> targetList;
     private void Start()
     {
-        targetList = new List<GameObject>(Resources.LoadAll<GameObject>("ccadori/Vector Forest Scenery/Prefabs/Dinamic/Green-Trees"));
+        targetList = new List<GameObject>(Resources.LoadAll<GameObject>("ccadori/Vector Forest Scenery/Prefabs/Dinamic/Creatures"));
         SpawnPrefab();
     }
     public void SpawnPrefab()
     {
-        int j = Random.Range(treeMin, treeMax);
+        int j = Random.Range(creatureMin, creatureMax);
         for (int i = 0; i <= j; i++)
         {
             int k = Random.Range(0, targetList.Count);
