@@ -1122,6 +1122,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: insectsList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: insectsList.Array.data[1]
+      value: 
+      objectReference: {fileID: 3646369324653406717, guid: 99ab48be53bc2db438b193e44103cab7, type: 3}
+    - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: insectsList.Array.data[2]
+      value: 
+      objectReference: {fileID: 3646369324653406717, guid: 7ccb824affc16934a80d77b930ef4c3c, type: 3}
+    - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: insectsList.Array.data[3]
+      value: 
+      objectReference: {fileID: 3646369324653406717, guid: 54788a52cdc812744a00bc2641f44fd8, type: 3}
+    - target: {fileID: 3431718539145184391, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
+      propertyPath: insectsList.Array.data[4]
+      value: 
+      objectReference: {fileID: 7263024315408669110, guid: 1c65114b047733149b505a877579c1b8, type: 3}
     - target: {fileID: 3431718539145184411, guid: 0b002fc871e86c04982c8f7aad7c396c, type: 3}
       propertyPath: m_Name
       value: MapManager
