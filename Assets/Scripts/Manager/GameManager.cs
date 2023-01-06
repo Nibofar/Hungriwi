@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour {
     public event GameStateChangeHandler OnGameStateChanged;
 
     [Header("Map")]
+    public GameObject MapManager;
     public int sizeMapX;
     public int sizeMapY;
     [Tooltip("Distance between props")]public float mapRatio;
@@ -119,6 +120,9 @@ public class GameManager : MonoBehaviour {
             Destroy(DecorList[i].gameObject);
         }
         DecorList.Clear();
+        MapManager.GetComponent<TreeSpawn>().SpawnPrefab();
+        MapManager.GetComponent<DécorsSpawn>().SpawnPrefab();
+        MapManager.GetComponent<CreatureManager>().SpawnPrefab();
     }
     public void AddJaugeProgression(float value) {
         UIManager.Instance.AddJaugeProgression(value);
