@@ -199,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 3539633984228288017}
   sprite: {fileID: 5030252144802685184}
-  speed: 300
+  speed: 50
   stunned: 0
 --- !u!61 &8244319807262165007
 BoxCollider2D:

@@ -20,6 +20,7 @@ public class KiwiControler : MonoBehaviour {
         stunned = false;
     }
     void Update() {
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         if (DayManager.Instance.CurrentDayState == DayManager.DayState.Day) {
             rb.velocity = Vector2.zero;
             return;
@@ -59,7 +60,6 @@ public class KiwiControler : MonoBehaviour {
             }
             rb.velocity += speed * Time.deltaTime * direction;
             rb.velocity *= 0.8f;
-            animator.SetFloat("Speed", Mathf.Abs(direction.x));
         }
     }
 
