@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7897f85eb140f454aa21b81c74668167, type: 3}
+    - target: {fileID: 2967241407140303204, guid: 0c7d846ecf3b50d44bc9385f41e4f41a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab71163d61881d8409992dc471b91941, type: 2}
     - target: {fileID: 7726712376034893948, guid: 0c7d846ecf3b50d44bc9385f41e4f41a, type: 3}
       propertyPath: m_Name
       value: Stone 3 Yellow

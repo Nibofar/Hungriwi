@@ -53,11 +53,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1828164993209728408, guid: 411fd9c3f5ca15b49a058ff75af5542d, type: 3}
       propertyPath: m_Name
-      value: Stone 1 Brown
+      value: Stone 1 Brown Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6578065539100363904, guid: 411fd9c3f5ca15b49a058ff75af5542d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 0df077f5ecd664846b5ca67e21830210, type: 3}
+    - target: {fileID: 6578065539100363904, guid: 411fd9c3f5ca15b49a058ff75af5542d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fedb24eae40c24347a449c859cea6899, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 411fd9c3f5ca15b49a058ff75af5542d, type: 3}

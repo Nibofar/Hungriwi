@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1092374788496387125, guid: 6dbc249f36548f94894c7446a1b24428, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd3b505459a585046a48cc9057c94f49, type: 2}
     - target: {fileID: 1092374789140380016, guid: 6dbc249f36548f94894c7446a1b24428, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -53,11 +57,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1092374789140380019, guid: 6dbc249f36548f94894c7446a1b24428, type: 3}
       propertyPath: m_Name
-      value: Butterfly Red
+      value: Butterfly Red Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3683556190400365706, guid: 6dbc249f36548f94894c7446a1b24428, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 6ba1c3817bc87974a822442ceb0a545a, type: 3}
+    - target: {fileID: 3683556190400365706, guid: 6dbc249f36548f94894c7446a1b24428, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 10cdb4b7e43b1f049a5ef336c46f4737, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dbc249f36548f94894c7446a1b24428, type: 3}
