@@ -44,7 +44,7 @@ public class DayManager : MonoBehaviour {
         }
 
 
-        if (CurrentDayState == DayState.Day) return;
+        if (CurrentDayState == DayState.Night) return;
 
         HourTime += DeltaGameTime;
         if(HourTime > 60.0f * 60.0f) {
