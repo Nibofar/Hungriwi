@@ -64,7 +64,7 @@ MonoBehaviour:
   insectsList:
   - {fileID: 3646369324653406717, guid: aa366e22b2ee51f48a045a0b32dd6a17, type: 3}
   - {fileID: 7263024315408669110, guid: 1c65114b047733149b505a877579c1b8, type: 3}
-  maxNb: 20
+  maxNb: 40
   wormSpawn: 70
   insectEatInARow: 10
   removeMax: 2
@@ -95,4 +95,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decorMin: 100
-  decorMax: 200
+  decorMax: 150

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2007219750784066962}
   - component: {fileID: 1091224802464273963}
   - component: {fileID: 359614443659906459}
+  - component: {fileID: 501709632}
   m_Layer: 0
   m_Name: Mushroom 2 Red
   m_TagString: Untagged
@@ -86,6 +87,32 @@ MonoBehaviour:
   _shakeOnStart: 1
   _lightAffectedRenderers:
   - {fileID: 2007219751926095338}
+--- !u!61 &501709632
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007219750784066960}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.6}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &2007219751067020279
 GameObject:
   m_ObjectHideFlags: 0
